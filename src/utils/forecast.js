@@ -9,7 +9,7 @@ const forecast = (latitude,longitude,callback)=>{
             callback('sahi location daal gandu',undefined)
         }
         else{
-            callback(undefined,"gaand phad garmi hori hai "+body.daily.data[0].summary+' abhi ka taapmaan '+body.currently.temperature+' degree celcius hai aur baarish ka chance '+body.currently.precipProbability+'% hai   HAAAAYEEE GARMIII!!!!')
+            callback(undefined,"gaand phad garmi hori hai "+body.daily.data[0].summary+' abhi ka taapmaan '+body.currently.temperature+' degree fahrenheit hai aur baarish ka chance '+body.currently.precipProbability+'% hai   HAAAAYEEE GARMIII!!!!')
     }
     })
 }
