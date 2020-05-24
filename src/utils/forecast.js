@@ -6,10 +6,10 @@ const forecast = (latitude,longitude,callback)=>{
             callback("check your internet connection",undefined)
         }
         else if(body.error){
-            callback('unable to fetch your location',undefined)
+            callback('sahi location daal gandu',undefined)
         }
         else{
-            callback(undefined,body.daily.data[0].summary+'it is currently '+body.currently.temperature+' degree celcius with '+body.currently.precipProbability+'% chance of rain')
+            callback(undefined,"gaand phad garmi hori hai "+body.daily.data[0].summary+' abhi ka taapmaan '+body.currently.temperature+' degree celcius hai aur baarish ka chance '+body.currently.precipProbability+'% hai   HAAAAYEEE GARMIII!!!!')
     }
     })
 }

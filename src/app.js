@@ -69,30 +69,30 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
-        name: 'Andrew Mead'
+        title: 'Weather dekhla gaandu',
+        name: 'Daddy'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
-        name: 'Andrew Mead'
+        title: 'Mereko to tu janta hi hai',
+        name: 'Daddy'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'This is some helpful text.',
-        title: 'Help',
-        name: 'Andrew Mead'
+        helpText: 'hogayi help aaya mazza',
+        title: 'kuch help nhi dunga bhad bsdk',
+        name: 'Daddy'
     })
 })
 
 app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.send({
-            error:"please provide a valid address to continue"
+            error:"Abey saale!! location to daal gaandu"
         })
     }
 
@@ -159,16 +159,16 @@ app.get('/products', (req, res) => {
 
 app.get('/help/*',(req,res)=>{
     res.render('404',{
-        title:"Help article Not Found",
-        msg:'page not found',
-        name: 'Andrew Mead'
+        title:"shi url daal chutiyaa",
+        msg:'kuch ni hai yahan',
+        name: 'Daddy'
     })
 })
 app.get('*',(req,res)=>{
     res.render('404',{
-        title:"Not Found",
-        msg:'page not found',
-        name: 'Andrew Mead'
+        title:"shi url daal chutiyaa",
+        msg:'kuch ni hai yahan',
+        name: 'Daddy'
     })
 })
 app.listen(port, () => {
