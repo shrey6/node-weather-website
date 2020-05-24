@@ -83,7 +83,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'hogayi help aaya mazza   ek baar galat url daal ka dekh 3000 ka',
+        helpText: 'hogayi help aaya mazza..   !!!!ek baar galat url daal ka dekh help ka aage!!!',
         title: 'kuch help nhi dunga bhag bsdk',
         name: 'Daddy'
     })
