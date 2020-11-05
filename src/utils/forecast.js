@@ -6,10 +6,10 @@ const forecast = (latitude,longitude,callback)=>{
             callback("check your internet connection",undefined)
         }
         else if(body.error){
-            callback('sahi location daal gandu',undefined)
+            callback('Enter correct location',undefined)
         }
         else{
-            callback(undefined,"Gaand phad garmi hori hai ."+body.daily.data[0].summary+'                           Abhi ka taapmaan :'+body.currently.temperature+' degree fahrenheit hai.                                  Aur baarish ka chance: '+body.currently.precipProbability+'% hai.                 Sabse upar ka tapman: '+ body.daily.data[0].temperatureHigh+' Sabse neecha ka tapman: '+ body.daily.data[0].temperatureLow+ '.              ............ HAAAAYEEE GARMIII!!!!..........')
+            callback(undefined,"Weather ."+body.daily.data[0].summary+'    temprature right now is :'+body.currently.temperature+' degree fahrenheit . Precipitation is : '+body.currently.precipProbability+'% .   Max Temperature: '+ body.daily.data[0].temperatureHigh+' Min Temperature: '+ body.daily.data[0].temperatureLow+ '.')
     }
     })
 }
