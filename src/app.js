@@ -16,19 +16,19 @@
 //  app.get('',(req,res)=>{
 //     res.render('index',{
 //         title:'Weather App',
-//         name:'Andrew Mead' 
+//         name:'Shrey Agarwal' 
 //     })
 // })
 // app.get('/help',(req,res)=>{
 //     res.render('help',{
 //         title:'Help Page',
-//         helpText:'help me help you'
+//         helpText:'How can i help you'
 //     })
 // })
 // app.get('/about',(req,res)=>{
 //     res.render('about',{
 //     title:'About us',
-//     name:'Andrew Mead' 
+//     name:'Shrey Agarwal' 
 // })
 // })
 // app.get('/weather',(req,res)=>{
@@ -69,30 +69,30 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather dekhla gaandu',
-        name: 'Daddy'
+        title: 'Weather',
+        name: 'Shrey Agarwal'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'Mereko to tu janta hi hai',
-        name: 'Daddy'
+        title: 'About Me',
+        name: 'Shrey Agarwal'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'hogayi help aaya mazza..   !!!!ek baar galat url daal ka dekh help ka aage!!!',
-        title: 'kuch help nhi dunga bhag bsdk',
-        name: 'Daddy'
+        helpText: 'Thankyou!!',
+        title: 'Weather',
+        name: 'Shrey Agarwal'
     })
 })
 
 app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.send({
-            error:"Abey saale!! location to daal gaandu"
+            error:"Please enter location"
         })
     }
 
@@ -159,16 +159,16 @@ app.get('/products', (req, res) => {
 
 app.get('/help/*',(req,res)=>{
     res.render('404',{
-        title:"shi url daal chutiyaa",
-        msg:'kuch ni hai yahan',
-        name: 'Daddy'
+        title:"Please enter correct url",
+        msg:'Nothing to show!!',
+        name: 'Shrey Agarwal'
     })
 })
 app.get('*',(req,res)=>{
     res.render('404',{
-        title:"shi url daal chutiyaa",
-        msg:'kuch ni hai yahan',
-        name: 'Daddy'
+        title:"Please enter correct url",
+        msg:'Nothing to show!!',
+        name: 'Shrey Agarwal'
     })
 })
 app.listen(port, () => {
