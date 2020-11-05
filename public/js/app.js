@@ -6,7 +6,7 @@ const messageThree = document.querySelector('#message-3')
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location = search.value
-    messageOne.textContent = 'ruk zara load hone da'
+    messageOne.textContent = 'Loading...'
     messageTwo.textContent=""
     messageThree.textContent=""
     fetch('/weather?address='+location).then((response)=>{
@@ -15,9 +15,9 @@ weatherForm.addEventListener('submit',(e)=>{
             messageOne.textContent = data.error
         }
         else{
-            messageOne.textContent = "keval apni location dekhiyo kissi ladki ki nhi  "+ data.location
+            messageOne.textContent = "Check your location  "+ data.location
             messageTwo.textContent = data.forecast
-            messageThree.textContent = "tapmaan dekh bhi liya bahot tez hora hai!!!"
+            messageThree.textContent = "Weather"
         }
     })
 })
